@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Гоночки — бесконечная игра</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ui">
+    <div class="top-row">
+      <div class="selector">
+        <label>Выбери машину:</label>
+        <select id="carSelect">
+          <option value="0">Спорткар</option>
+          <option value="1">Седан</option>
+          <option value="2">Внедорожник</option>
+        </select>
+      </div>
+
+      <div class="color">
+        <label>Цвет:</label>
+        <input type="color" id="carColor" value="#0066ff">
+        <button id="changeColor">Применить</button>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn">Старт</button>
+        <button id="restartBtn">Перезапустить</button>
+        <span id="score">Очки: 0</span>
+      </div>
+    </div>
+
+    <p class="hint">Стрелки ← → — движение. Уворачивайся от шашек. При ударе — проигрыш.</p>
+  </div>
+
+  <div class="game-wrap">
+    <canvas id="gameCanvas" width="480" height="720"></canvas>
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-box">
+        <h2 id="overlayTitle">Вы проиграли</h2>
+        <p id="overlayScore">Очки: 0</p>
+        <button id="overlayRestart">Ещё раз</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
